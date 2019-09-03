@@ -27,7 +27,7 @@ void main(){
     scanf("\n%c%c", &trocaA, &trocaB);
     while(trocaA != '#'){
         saida = troca_carecter_de_entrada(saida, trocaA, trocaB);
-        scanf("%c%c\n", &trocaA, &trocaB);
+        scanf("\n%c%c", &trocaA, &trocaB);
     }
     
 }
