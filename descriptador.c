@@ -24,15 +24,11 @@ void main(){
     faz_estatistica(entrada, estatistica);
     printa_estatistica(estatistica);
     saida = troca_carecteres_de_entrada(entrada, estatistica);
-    // trocaA = getchar();
-    // trocaB = getchar();
-    // printf("%c%c\n", trocaA, trocaB);
-    // while(trocaA != '#'){
-    //     saida = troca_carecter_de_entrada(saida, trocaA, trocaB);
-    //     trocaA = getchar();
-    //     trocaB = getchar();
-    //     printf("%c%c\n", trocaA, trocaB);
-    // }
+    scanf("\n%c%c", &trocaA, &trocaB);
+    while(trocaA != '#'){
+        saida = troca_carecter_de_entrada(saida, trocaA, trocaB);
+        scanf("%c%c\n", &trocaA, &trocaB);
+    }
     
 }
 
@@ -106,6 +102,8 @@ char* troca_carecter_de_entrada(char *entrada, char trocaA, char trocaB) {
     for(j =0; j < len; j++) {
         if(entrada[j] == trocaA)
             saida[j] = trocaB;
+        else if(entrada[j] == trocaB)
+            saida[j] = trocaA;
         else 
             saida[j] = entrada[j];
     }
